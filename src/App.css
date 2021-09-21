@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+:root {
+  --button-background: rgb(255, 232, 232);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  font-family: "Indie Flower", cursive;
+  background: var(--button-background) content-box;
+  border-radius: 2rem;
+  border: 3px dotted var(--button-background);
+  padding: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote {
+  padding: 1em;
+  text-align: center;
+  text-shadow: 2px 3px 4px #000000;
+  font-size: 1.2rem;
 }
