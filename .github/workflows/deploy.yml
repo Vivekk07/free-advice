@@ -1,0 +1,29 @@
+name: Publish free-advice on gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: install dependencies
+        run: yarn
+      - name: deploy
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git config --global user.email "${USER_EMAIL}"
+          git config --global user.name "${USER_NAME}"
+          yarn run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
