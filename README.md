@@ -1,6 +1,6 @@
 ## Link 
 
-vivekk07.github.io/free-advice/
+[ivivek.me/free-advice](https://vivekk07.github.io/free-advice/)
 
 ## Screenshot
 
